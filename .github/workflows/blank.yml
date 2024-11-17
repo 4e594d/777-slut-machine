@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>777 슬롯머신</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>777 슬롯머신</h1>
+
+  <!-- 초기 자금 설정 -->
+  <div id="start-screen">
+    <h2>초기 자금을 설정하세요 (₩):</h2>
+    <input type="number" id="initial-balance" min="10000" step="10000" value="1000000">
+    <button id="start-button">게임 시작</button>
+  </div>
+
+  <!-- 게임 화면 -->
+  <div id="game-screen" style="display: none;">
+    <p>현재 잔액: ₩<span id="balance">0</span></p>
+    <p>대출 잔액: ₩<span id="loan-balance">0</span></p>
+    <p>총 스핀 횟수: <span id="spin-count">0</span></p>
+    <label for="bet-amount">배팅 금액: ₩</label>
+    <input type="number" id="bet-amount" min="10000" step="10000" value="50000">
+
+    <!-- 슬롯머신 -->
+    <div id="slot-machine">
+      <div class="row">
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="row">
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+      <div class="row">
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+    </div>
+
+    <button id="spin-button">Spin</button>
+    <input type="number" id="loan-amount" placeholder="대출 금액 (₩)" min="100000" step="100000">
+    <button id="loan-button">대출 받기</button>
+    <button id="repay-button">대출 상환</button>
+    <button id="restart-button">게임 재시작</button>
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
